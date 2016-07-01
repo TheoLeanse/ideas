@@ -75,7 +75,6 @@ const mapStateToIdeaSubmitProps = () => {
 const mapDispatchToProps = (dispatch) => {
     return {
         handleSubmit(formData) {
-            console.log(dispatch, formData);
             dispatch({type: 'ADD_IDEA', data: formData})
         }
     }
@@ -84,7 +83,6 @@ const mapDispatchToProps = (dispatch) => {
 IdeaSubmit = connect(mapStateToIdeaSubmitProps, mapDispatchToProps)(IdeaSubmit);
 
 let App = ({ ideas }) => {
-    console.log(ideas);
     return <div>
         {ideas.map((idea, key) => <Idea key={ key } idea={ idea } /> ) }
         <IdeaSubmit />
