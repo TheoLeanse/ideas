@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const Supporters = ({ supporters, id, clickHandler }) => {
     return (
-            <div>
+            <div> Supported by
             <ul>{ supporters.map((supporter, i) => <li key={ i }>{ supporter }</li>) }</ul>
             <button onClick={ () => clickHandler('Theo', id) }>Support</button>
             </div>

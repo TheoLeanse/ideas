@@ -6,13 +6,19 @@ const IdeaSubmit = ({ handleSubmit }) => {
             <form onSubmit={ (e) => {
                 e.preventDefault();
                 handleSubmit(e.target);
-            }} >
+            }} className="ideas-border">
+            <div className="ideas-input">
             <label htmlFor="title">Title:</label>
             <input type="text" name="title" />
+            </div>
+            <div className="ideas-input">
             <label htmlFor="author">Author:</label>
             <input type="text" name="author" />
+            </div>
+            <div className="ideas-input">
             <label htmlFor="description">Description:</label>
             <input type="text" name="description" />
+            </div>
             <input type="submit" value="Submit" />
             </form>
     );
