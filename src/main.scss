@@ -1,52 +1,16 @@
+// global
+
 html, button, input {
   font-family: 'Montserrat', sans-serif;
 }
+
+// app-shell & shared
 
 .ideas-main {
     max-width: 650px;
     margin-top: 80px;
 }
-
-.ideas-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    justify-content: space-between;
-}
-
-.ideas-form {
-    padding: 20px;
-}
-
-.ideas-halfflex {
-    width: 50%;
-    display: flex;
-}
-
-.ideas-input {
-    width: 100%;
-    box-sizing: border-box;
-    border: none;
-    font-size: 20px;
-    margin: 20px 0;
-}
-
-.ideas-input:focus {
-    outline: none;
-}
-
-.ideas-idea {
-    margin: 5px 0;
-    box-shadow: 0px 3px 5px #888888;
-}
-.ideas-border {
-    border: 1px solid black;
-}
-
-.ideas-user {
-    display: flex;
-    flex-direction: column;
-}
+// header
 
 .ideas-header {
     display: flex;
@@ -55,9 +19,16 @@ html, button, input {
     position: fixed;
     background: white;
     width: 100%;
-    top: 0px;
+    top: 0;
     left: 0;
-    right: 0px;
+    right: 0;
+}
+
+// idea-card
+
+.ideas-idea {
+    margin: 5px 0;
+    box-shadow: 0px 1px 3px #888888;
 }
 
 .ideas-idea-header {
@@ -70,8 +41,54 @@ html, button, input {
     margin: 0;
 }
 
+.ideas-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.ideas-popularity {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .ideas-idea-description {
     padding: 20px;
+}
+
+// idea-submit
+
+.ideas-form {
+    padding: 20px;
+}
+
+.ideas-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.ideas-input--long {
+    height: 200px;
+}
+
+.ideas-input:focus {
+    outline: none;
+}
+
+//
+
+.ideas-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.ideas-border {
+    border: 1px solid black;
 }
 
 .ideas-supporters {
@@ -80,7 +97,9 @@ html, button, input {
 
 .ideas-header-item {
     cursor: pointer;
-    margin: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 .ideas-header-item--end {
@@ -89,12 +108,6 @@ html, button, input {
 
 .ideas-header-buttons {
     display: flex;
-}
-
-.ideas-popularity {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .ideas-hidden {
@@ -115,4 +128,9 @@ html, button, input {
 
 .ideas-button:focus {
     outline: none;
+}
+
+.ideas-rhs-button-container {
+    display: flex;
+    justify-content: flex-end;
 }

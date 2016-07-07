@@ -10,9 +10,9 @@ export default ({ idea }) => {
         </div>
         <div className="ideas-idea-description">{ idea.description }</div>
         <div className="ideas-popularity">
-        <SupportButton user="theo" id={ idea.id } />
-        <div>Supporters: { idea.supporters.length }</div>
         <div>Comments: { idea.comments.length }</div>
+        <div>Supporters: { idea.supporters.length }</div>
+        <SupportButton user="theo" id={ idea.id } />
         </div>
         </div>
     );
