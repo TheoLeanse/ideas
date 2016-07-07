@@ -1,14 +1,21 @@
 html, button {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.ideas-main {}
+.ideas-main {
+    max-width: 650px;
+}
 
 .ideas-list {
     display: flex;
 }
 
 .ideas-idea {
+    display: flex;
+}
+
+.ideas-halfflex {
+    width: 50%;
     display: flex;
 }
 
