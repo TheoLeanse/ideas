@@ -1,17 +1,15 @@
 import React from 'react';
-import { Supporters } from '.';
+import { Supporters, User } from '.';
 
 export default ({ idea }) => {
     return (
-            <div className="ideas-idea ideas-border">
-            <div className="ideas-halfflex">
-            <h1>{ idea.title }</h1>
-            <p>{ idea.description }</p>
-            </div>
-            <div className="ideas-halfflex">
-            <h2>Submitted by { idea.author }</h2>
-            <Supporters supporters={ idea.supporters } id={ idea.id } />
-            </div>
-            </div>
+        <div className="ideas-idea ideas-border">
+        <div className="ideas-idea-header">
+        <h1 className="ideas-idea-title">{ idea.title }</h1>
+        <User name={ idea.author } avatar="http://bit.ly/29pRJ7e" link="/" />
+        </div>
+        <div className="ideas-idea-description">{ idea.description }</div>
+        <Supporters supporters={ idea.supporters } id={ idea.id } />
+        </div>
     );
 };

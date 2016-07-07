@@ -8,10 +8,13 @@ html, button {
 
 .ideas-list {
     display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
 }
 
 .ideas-idea {
-    display: flex;
+
 }
 
 .ideas-halfflex {
@@ -25,4 +28,44 @@ html, button {
 
 .ideas-border {
     border: 1px solid black;
+}
+
+.ideas-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.ideas-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ideas-idea-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.ideas-idea-title {
+    margin: 0;
+}
+
+.ideas-idea-description {
+    padding: 40px;
+}
+
+.ideas-supporters {
+    padding: 20px;
+}
+
+.ideas-header-item {
+    margin: 10px;
+}
+
+.ideas-header-item--end {
+    align-self: flex-end;
+}
+
+.ideas-header-buttons {
+    display: flex;
 }

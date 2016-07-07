@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Idea, IdeaSubmit } from '.';
+import { Idea, IdeaSubmit, Header } from '.';
 
 const App = ({ ideas }) => {
     return (
-        <div className="ideas-main">
-        	<div>{ideas.map((idea, key) => <Idea key={ key } idea={ idea } /> ) }</div>
+        <div>
+        <Header />
+            {ideas.map((idea, key) => <Idea key={ key } idea={ idea } /> ) }
         	<IdeaSubmit />
-        </div>
+        	</div>
     );
 };
 
