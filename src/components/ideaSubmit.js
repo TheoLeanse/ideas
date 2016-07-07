@@ -14,9 +14,9 @@ const IdeaSubmit = ({ user, handleSubmit }) => {
 
             <label className="" htmlFor="title">Give your idea a title</label>
             <input className="ideas-input" autoFocus placeholder="" type="text" name="title" />
-            <label className="" htmlFor="description">What is your idea?</label>
+            <label className="" htmlFor="description">Describe your idea</label>
             <input className="ideas-input"  type="text" name="description" />
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" className='ideas-button' />
 
             <label className="ideas-hidden" htmlFor="author">Author:</label>
             <input className="ideas-hidden" type="text" name="author" defaultValue="theo" />

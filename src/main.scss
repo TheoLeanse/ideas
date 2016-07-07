@@ -1,9 +1,10 @@
-html, button {
+html, button, input {
   font-family: 'Montserrat', sans-serif;
 }
 
 .ideas-main {
     max-width: 650px;
+    margin-top: 80px;
 }
 
 .ideas-list {
@@ -27,13 +28,17 @@ html, button {
     box-sizing: border-box;
     border: none;
     font-size: 20px;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .ideas-input:focus {
     outline: none;
 }
 
+.ideas-idea {
+    margin: 5px 0;
+    box-shadow: 0px 3px 5px #888888;
+}
 .ideas-border {
     border: 1px solid black;
 }
@@ -46,6 +51,13 @@ html, button {
 .ideas-header {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px black solid;
+    position: fixed;
+    background: white;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    right: 0px;
 }
 
 .ideas-idea-header {
@@ -67,7 +79,8 @@ html, button {
 }
 
 .ideas-header-item {
-    margin: 10px;
+    cursor: pointer;
+    margin: 20px;
 }
 
 .ideas-header-item--end {
@@ -86,4 +99,20 @@ html, button {
 
 .ideas-hidden {
     display: none;
+}
+
+.ideas-button {
+    cursor: pointer;
+    border: none;
+    background: lightblue;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.ideas-button:active {
+    background: blue;
+}
+
+.ideas-button:focus {
+    outline: none;
 }

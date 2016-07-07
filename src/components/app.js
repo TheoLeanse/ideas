@@ -4,7 +4,7 @@ import { Idea, IdeaSubmit, Header } from '.';
 
 const App = ({ ideas }) => {
     return (
-        <div>
+        <div className="ideas-main">
         <Header />
             {ideas.map((idea, key) => <Idea key={ key } idea={ idea } /> ) }
         	<IdeaSubmit />

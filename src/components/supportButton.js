@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const SupportButton = ({ clickHandler, user, id }) => {
     return (
-            <button onClick={ () => clickHandler(user, id) }>Support</button>
+            <button className="ideas-button" onClick={ () => clickHandler(user, id) }>Support</button>
     );
 }
 
