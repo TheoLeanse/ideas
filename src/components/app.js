@@ -13,7 +13,7 @@ const App = ({ ideas }) => {
 };
 
 const mapStateToProps = (state) => {
-    return { ideas: state };
+    return { ideas: state.ideas };
 };
 
 export default connect(mapStateToProps)(App);

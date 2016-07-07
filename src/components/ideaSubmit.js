@@ -1,31 +1,31 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const IdeaSubmit = ({ handleSubmit }) => {
+const IdeaSubmit = ({ user, handleSubmit }) => {
     return (
             <form onSubmit={ (e) => {
                 e.preventDefault();
                 handleSubmit(e.target);
-            }} className="ideas-border">
-            <div className="ideas-input">
-            <label htmlFor="title">Title:</label>
-            <input type="text" name="title" />
-            </div>
-            <div className="ideas-input">
-            <label htmlFor="author">Author:</label>
-            <input type="text" name="author" />
-            </div>
-            <div className="ideas-input">
-            <label htmlFor="description">Description:</label>
-            <input type="text" name="description" />
-            </div>
+                Array.from(e.target.elements).forEach(el => {
+                    if (el.name === 'title') el.focus();
+                    if (el.value !== 'Submit') el.value = '';
+                });
+            }} className="ideas-border ideas-form">
+
+            <label className="" htmlFor="title">Give your idea a title</label>
+            <input className="ideas-input" autoFocus placeholder="" type="text" name="title" />
+            <label className="" htmlFor="description">What is your idea?</label>
+            <input className="ideas-input"  type="text" name="description" />
             <input type="submit" value="Submit" />
+
+            <label className="ideas-hidden" htmlFor="author">Author:</label>
+            <input className="ideas-hidden" type="text" name="author" defaultValue="theo" />
             </form>
     );
 };
 
-const mapStateToIdeaSubmitProps = () => {
-    return {};
+const mapStateToIdeaSubmitProps = (state) => {
+    return { user: state.user };
 }
 
 const mapDispatchToProps = (dispatch) => {

@@ -1,4 +1,4 @@
-const initialState = [
+const initialIdeasState = [
     {
         title: 'Developer corporate responsibility',
         author: 'James',
@@ -22,12 +22,13 @@ const acceptForm = ({ title, author, description }) => {
         title: title.value,
         author: author.value,
         description: description.value,
-        supporters: [],
+        supporters: [author.value],
+        comments: [],
         id: 3
     };
 };
 
-export default (state=initialState, action) => {
+export function ideasReducer (state=initialIdeasState, action) {
     switch (action.type) {
         case 'ADD_IDEA':
             return [
@@ -48,3 +49,7 @@ export default (state=initialState, action) => {
             return state;
     }
 };
+
+export function userReducer (state={ name: 'theo'}, action) {
+    return state;
+}

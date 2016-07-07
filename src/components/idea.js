@@ -9,9 +9,10 @@ export default ({ idea }) => {
         <User name={ idea.author } avatar="http://bit.ly/29pRJ7e" link="/" />
         </div>
         <div className="ideas-idea-description">{ idea.description }</div>
-        <div className="ideas-popularity"><div>Supporters: { idea.supporters.length }</div>
-        <div>Comments: { idea.comments.length }</div>
+        <div className="ideas-popularity">
         <SupportButton user="theo" id={ idea.id } />
+        <div>Supporters: { idea.supporters.length }</div>
+        <div>Comments: { idea.comments.length }</div>
         </div>
         </div>
     );
