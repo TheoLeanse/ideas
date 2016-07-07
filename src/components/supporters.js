@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { User } from '.';
+import { User, SupportButton } from '.';
 
-const Supporters = ({ supporters, id, clickHandler }) => {
+const Supporters = ({ supporters, user }) => {
     return (
         <div className="ideas-supporters">
         <p>Supporters:</p>
@@ -17,22 +17,7 @@ const Supporters = ({ supporters, id, clickHandler }) => {
         }
 
         </ul>
-
-        <button onClick={ () => clickHandler('Theo', id) }>Support</button>
+        <SupportButton user={ user } />
         </div>
     );
 }
-
-const mapStateToSupportProps = () => {
-    return {};
-}
-
-const mapDispatchToSupportProps = (dispatch) => {
-    return {
-        clickHandler(username, id) {
-            dispatch({type: 'SUPPORT', username, id});
-        }
-    };
-};
-
-export default connect(mapStateToSupportProps, mapDispatchToSupportProps)(Supporters);

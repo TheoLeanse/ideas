@@ -1,5 +1,5 @@
 import React from 'react';
-import { Supporters, User } from '.';
+import { Supporters, User, SupportButton } from '.';
 
 export default ({ idea }) => {
     return (
@@ -9,7 +9,10 @@ export default ({ idea }) => {
         <User name={ idea.author } avatar="http://bit.ly/29pRJ7e" link="/" />
         </div>
         <div className="ideas-idea-description">{ idea.description }</div>
-        <Supporters supporters={ idea.supporters } id={ idea.id } />
+        <div className="ideas-popularity"><div>Supporters: { idea.supporters.length }</div>
+        <div>Comments: { idea.comments.length }</div>
+        <SupportButton user="theo" id={ idea.id } />
+        </div>
         </div>
     );
 };

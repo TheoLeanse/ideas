@@ -4,5 +4,6 @@ import IdeaSubmit from './ideaSubmit';
 import App from './app';
 import User from './user';
 import Header from './header';
+import SupportButton from './supportButton';
 
-export { Supporters, Idea, IdeaSubmit, App, User, Header };
+export { Supporters, Idea, IdeaSubmit, App, User, Header, SupportButton };

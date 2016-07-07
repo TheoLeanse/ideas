@@ -4,6 +4,7 @@ const initialState = [
         author: 'James',
         description: 'Get employers to volunteer their developers\' time as part of their corporate responsibility programme',
         supporters: ['Sue', 'Gareth', 'Clive', 'June'],
+        comments: [{}, {}],
         id: 2
     },
     {
@@ -11,6 +12,7 @@ const initialState = [
         author: 'Charlie',
         description: 'Retrieve and distribute free food to the needy',
         supporters: ['Sue', 'Gareth', 'Clive', 'June'],
+        comments: [{}, {}],
         id: 1
     }
 ];
