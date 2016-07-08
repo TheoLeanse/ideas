@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { hashHistory } from 'react-router'
+import { hashHistory } from 'react-router';
 
 const IdeaSubmit = ({ user, handleSubmit }, context) => {
-    console.log(context);
     return (
             <form onSubmit={ (e) => {
                 e.preventDefault();

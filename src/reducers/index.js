@@ -1,18 +1,17 @@
 import { combineReducers } from 'redux';
 import initialIdeasState from './initialIdeasState';
 
-const acceptForm = ({ title, author, description }) => {
-    return {
-        title: title.value,
-        author: author.value,
-        description: description.value,
-        supporters: [author.value],
-        comments: [],
-        id: 3
-    };
-};
+export default combineReducers({ user, nav, ideas });
 
-export function ideasReducer (state=initialIdeasState, action) {
+function user () {
+    return { name: 'theo'};
+}
+
+function nav (state=false, action) {
+    return action.type === 'TOGGLE_NAV' ? !state : state;
+}
+
+function ideas (state=initialIdeasState, action) {
     switch (action.type) {
         case 'ADD_IDEA':
             return [
@@ -34,21 +33,13 @@ export function ideasReducer (state=initialIdeasState, action) {
     }
 };
 
-export function userReducer (state={ name: 'theo'}, action) {
-    return state;
-}
-
-export function uiReducer (state=false, action) {
-    switch (action.type) {
-        case 'TOGGLE_NAV':
-            return !state;
-        default:
-            return state;
-    }
-}
-
-export default combineReducers({
-    user: userReducer,
-    ideas: ideasReducer,
-    nav: uiReducer
-});
+function acceptForm ({ title, author, description }) {
+    return {
+        title: title.value,
+        author: author.value,
+        description: description.value,
+        supporters: [author.value],
+        comments: [],
+        id: 3
+    };
+};
