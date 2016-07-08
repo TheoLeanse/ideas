@@ -37,11 +37,17 @@ html, button, input {
   display: flex;
   justify-content: space-around;
 }
+
+.ideas-menu-option {
+  cursor: pointer;
+}
+
 // idea-card
 
 .ideas-idea {
     margin: 5px 0;
     box-shadow: 0px 1px 3px #888888;
+    background: white;
 }
 
 .ideas-idea-header {
@@ -72,7 +78,8 @@ html, button, input {
 // idea-submit
 
 .ideas-form {
-    padding: 20px;
+  padding: 20px;
+  background: white;
 }
 
 .ideas-input {
