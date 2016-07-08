@@ -7,11 +7,11 @@ const SupportButton = ({ clickHandler, user, id }) => {
     );
 }
 
-const mapStateToSupportProps = () => {
+const mapStateToProps = () => {
     return {};
 }
 
-const mapDispatchToSupportProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         clickHandler(user, id) {
             dispatch({type: 'SUPPORT', user, id});
@@ -19,4 +19,4 @@ const mapDispatchToSupportProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToSupportProps, mapDispatchToSupportProps)(SupportButton);
+export default connect(mapStateToProps, mapDispatchToProps)(SupportButton);

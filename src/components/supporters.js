@@ -7,15 +7,13 @@ const Supporters = ({ supporters, user }) => {
         <div className="ideas-supporters">
         <p>Supporters:</p>
         <ul className='ideas-list'>
-
-        {
-            supporters.map((supporter, i) => {
-                return (<li className='ideas-user' key={ i }>
-                    <User name={ supporter } link="/" avatar="http://bit.ly/29pRJ7e"/>
-                    </li>);
-            })
-        }
-
+        { supporters.map((supporter, i) => {
+            return (
+                <li className='ideas-user' key={ i }>
+            	    <User name={ supporter } link="/" avatar="http://bit.ly/29pRJ7e"/>
+                </li>
+            );
+        }) }
         </ul>
         <SupportButton user={ user } />
         </div>

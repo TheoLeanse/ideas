@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
         handleNavClick() {
             dispatch({ type: 'TOGGLE_NAV'});
         }
-    }
-}
+    };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Menu);

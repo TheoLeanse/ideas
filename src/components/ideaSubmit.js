@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { hashHistory } from 'react-router';
 
-const IdeaSubmit = ({ user, handleSubmit }, context) => {
+const IdeaSubmit = ({ user, handleSubmit }) => {
     return (
             <form onSubmit={ (e) => {
                 e.preventDefault();

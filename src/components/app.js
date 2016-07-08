@@ -13,7 +13,7 @@ const App = ({ children, nav }) => {
 };
 
 const mapStateToProps = (state) => {
-    return { ideas: state.ideas, nav: state.nav };
+    return { nav: state.nav };
 };
 
 export default connect(mapStateToProps)(App);
