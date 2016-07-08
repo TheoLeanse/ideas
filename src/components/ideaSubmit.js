@@ -1,15 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { hashHistory } from 'react-router'
 
-const IdeaSubmit = ({ user, handleSubmit }) => {
+const IdeaSubmit = ({ user, handleSubmit }, context) => {
+    console.log(context);
     return (
             <form onSubmit={ (e) => {
                 e.preventDefault();
                 handleSubmit(e.target);
-                Array.from(e.target.elements).forEach(el => {
-                    if (el.name === 'title') el.focus();
-                    if (el.value !== 'Submit') el.value = '';
-                });
+                hashHistory.push('/');
             }} className="ideas-border ideas-form">
 
             <label className="" htmlFor="title">Give your idea a title</label>
