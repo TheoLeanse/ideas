@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route } from 'react-router';
-import { App, IdeaSubmit } from './components';
+import { IdeaFeed, NewIdea } from './components';
 
 export default (
     <div>
-    <Route path='/' component={ App }/>
-    <Route path='/new' component={ IdeaSubmit }/>
+    <Route path='/' component={ IdeaFeed }/>
+    <Route path='/new' component={ NewIdea }/>
     </div>
 );

@@ -5,5 +5,19 @@ import App from './app';
 import User from './user';
 import Header from './header';
 import SupportButton from './supportButton';
+import NewIdea from './newIdea';
+import IdeaFeed from './ideaFeed';
+import Nav from './nav';
 
-export { Supporters, Idea, IdeaSubmit, App, User, Header, SupportButton };
+export {
+    Nav,
+    Supporters,
+    Idea,
+    IdeaSubmit,
+    App,
+    User,
+    Header,
+    SupportButton,
+    NewIdea,
+    IdeaFeed
+};

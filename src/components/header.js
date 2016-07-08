@@ -1,12 +1,29 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default () => {
+const Header = ({ nav, handleNavClick }) => {
     return (
             <header className="ideas-header">
-            <a href="/" className="ideas-header-item ideas-header-logo">Thinking space</a>
+            <div className="ideas-header-inner">
+            <a href="/" className="ideas-header-item ideas-header-logo">Logo</a>
             <div className="ideas-header-buttons">
-            <a href='#/new' className="ideas-header-item">new</a>
-            <div className="ideas-header-item">nav</div></div>
+            <a href='#/new' className="ideas-header-item" onClick={ () => nav && handleNavClick() }>new</a>
+            <div className="ideas-header-item" onClick={ handleNavClick }>menu</div></div>
+            </div>
             </header>
     );
-}
+};
+
+const mapStateToProps = (state) => {
+    return {nav: state.nav};
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleNavClick() {
+            dispatch({ type: 'TOGGLE_NAV'});
+        }
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

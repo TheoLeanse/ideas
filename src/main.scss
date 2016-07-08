@@ -9,13 +9,13 @@ html, button, input {
 .ideas-main {
     max-width: 650px;
     margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
 }
 // header
 
 .ideas-header {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px black solid;
+  border-bottom: 1px black solid;
     position: fixed;
     background: white;
     width: 100%;
@@ -23,7 +23,20 @@ html, button, input {
     left: 0;
     right: 0;
 }
+.ideas-header-inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
+// menu
+
+.ideas-menu {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
 // idea-card
 
 .ideas-idea {
