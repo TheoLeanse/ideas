@@ -8,11 +8,11 @@ const initialIdeasState = [
         id: 2
     },
     {
-        title: 'Distribution network for free food',
+        title: 'Test republic',
         author: 'Charlie',
-        description: 'Retrieve and distribute free food to the needy',
+        description: 'Design and build a community to test hypotheses around the structure of communities. Fund through exports. Experimentation. Desalination? Solar. Geodesic domes.',
         supporters: ['Sue', 'Gareth', 'Clive', 'June'],
-        comments: [{}, {}],
+        comments: [{}, {}, {}],
         id: 1
     }
 ];
