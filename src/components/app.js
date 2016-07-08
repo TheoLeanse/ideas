@@ -1,3 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Header, Nav } from '.';
 
-export default () => true;
+const App = ({ children, nav }) => {
+    return (
+        <div className="ideas-main">
+        <Header />
+        { nav && <Nav /> }
+        { children }
+      	</div>
+    );
+};
+
+const mapStateToProps = (state) => {
+    return { ideas: state.ideas, nav: state.nav };
+};
+
+export default connect(mapStateToProps)(App);

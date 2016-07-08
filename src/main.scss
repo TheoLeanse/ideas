@@ -30,6 +30,21 @@ html, button, input {
   margin: 0 auto;
 }
 
+.ideas-header-item {
+    cursor: pointer;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.ideas-header-item--end {
+    align-self: flex-end;
+}
+
+.ideas-header-buttons {
+    display: flex;
+}
+
 // menu
 
 .ideas-menu {
@@ -40,6 +55,8 @@ html, button, input {
 
 .ideas-menu-option {
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 // idea-card
@@ -114,21 +131,6 @@ html, button, input {
 
 .ideas-supporters {
     padding: 20px;
-}
-
-.ideas-header-item {
-    cursor: pointer;
-    padding: 20px;
-    text-decoration: none;
-    color: black;
-}
-
-.ideas-header-item--end {
-    align-self: flex-end;
-}
-
-.ideas-header-buttons {
-    display: flex;
 }
 
 .ideas-hidden {

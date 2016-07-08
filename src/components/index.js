@@ -8,8 +8,14 @@ import SupportButton from './supportButton';
 import NewIdea from './newIdea';
 import IdeaFeed from './ideaFeed';
 import Nav from './nav';
+import About from './about';
+import Register from './register';
+import Login from './login';
 
 export {
+    About,
+    Register,
+    Login,
     Nav,
     Supporters,
     Idea,
