@@ -12,6 +12,7 @@ function nav (state=false, action) {
 }
 
 function ideas (state=initialIdeasState, action) {
+    fetchIdeas().then(data => console.log(data));
     switch (action.type) {
         case 'ADD_IDEA':
             return [
@@ -46,6 +47,9 @@ function acceptForm ({ title, author, description }) {
 
 function fetchIdeas () {
     const url = 'https://syfdbw24e0.execute-api.eu-west-1.amazonaws.com/prod';
-    return fetch(url, {method: 'POST', body: {'operation': 'read'}})
-        .then(data => data.json());
+    return fetch(url, {
+        method: 'POST',
+        body: JSON.stringify({'operation': 'read'})
+    })
+        .then(res => res.json());
 }
